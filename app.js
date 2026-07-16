@@ -1,12 +1,11 @@
-
 const express = require("express");
-
+const router= require("./routes/auth.routes.js")
 const app = express();
 
 app.use(express.json());
 
-const userRoutes = require("./routes/userRoutes");
+app.use("/auth/route", router)
 
-app.use("/users", userRoutes);
+
 
 module.exports = app;
